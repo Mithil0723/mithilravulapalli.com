@@ -1,0 +1,110 @@
+// Project details data
+const projectDetails = {
+    'recommendation-system': {
+        title: 'Amazon Product Recommendation System',
+        description: `A suite of recommendation models was developed using Python and the Surprise library. The project involved preprocessing a large dataset of Amazon product ratings, followed by the implementation and evaluation of rank-based, user-user collaborative filtering, item-item collaborative filtering, and matrix factorization (SVD) models. The models were optimized through hyperparameter tuning to improve their predictive accuracy.
+
+Key Achievements:
+• Successfully built and compared multiple recommendation algorithms
+• Implemented user-user and item-item collaborative filtering techniques
+• Utilized matrix factorization (SVD) for improved recommendations
+• Optimized model performance through hyperparameter tuning
+
+Technical Stack:
+• Python with Surprise library for recommendation algorithms
+• Pandas and NumPy for data manipulation
+• Scikit-learn for model evaluation
+• Matplotlib and Seaborn for data visualization`,
+        sourceLink: 'https://github.com/Mithil0723/Recommendation-System'
+    },
+    'predictive-analysis': {
+        title: 'Predictive Lead Scoring Model for EdTech Customer Conversion',
+        description: `This project addresses a critical business challenge for the EdTech startup ExtraaLearn: how to efficiently allocate sales and marketing resources. By analyzing a large volume of incoming leads, the project aims to identify which prospects are most likely to convert into paying customers, thereby enabling the company to prioritize its efforts and maximize its return on investment.
+
+Key Achievements:
+• Developed a machine learning solution achieving 84% accuracy in predicting lead conversion
+• Implemented Decision Tree and Random Forest models with hyperparameter tuning
+• Conducted comprehensive exploratory data analysis (EDA)
+• Identified key drivers of lead conversion
+
+Technical Stack:
+• Python with Scikit-learn for machine learning
+• Pandas and NumPy for data preprocessing
+• Matplotlib and Seaborn for data visualization
+• GridSearchCV for hyperparameter optimization`,
+        sourceLink: 'https://github.com/Mithil0723/Predicting-Potential-Customers'
+    },
+    'foodhub-analysis': {
+        title: 'FoodHub Customer Order Analysis for Business Optimization',
+        description: `This project addresses a key business challenge for the FoodHub food aggregator company: understanding customer ordering patterns to enhance user experience and drive business growth. The analysis aimed to extract actionable insights from historical order data to inform decisions on restaurant partnerships, delivery logistics, and promotional strategies.
+
+Key Achievements:
+• Conducted in-depth exploratory data analysis on 1,898 customer orders
+• Generated actionable insights for improving operational efficiency
+• Created comprehensive data visualizations for pattern identification
+• Developed strategic recommendations for business growth
+
+Technical Stack:
+• Python with Pandas for data analysis
+• NumPy for numerical computations
+• Matplotlib and Seaborn for statistical visualizations
+• Jupyter Notebook for interactive analysis`,
+        sourceLink: 'https://github.com/Mithil0723/Food-Hub-Order-Analysis'
+    }
+};
+
+// Function to show project details modal
+function showProjectDetails(projectId) {
+    const details = projectDetails[projectId];
+    if (!details) return;
+
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const modalSourceLink = document.getElementById('modal-source-link');
+
+    modalTitle.textContent = details.title;
+    modalDescription.innerHTML = details.description.replace(/\n/g, '<br>');
+    modalSourceLink.href = details.sourceLink;
+    
+    modal.classList.add('show');
+}
+
+// Function to close modal
+function closeModal() {
+    const modal = document.getElementById('project-modal');
+    modal.classList.remove('show');
+}
+
+// Initialize project cards click handlers
+document.addEventListener('DOMContentLoaded', () => {
+    const projectCards = document.querySelectorAll('.project-card[data-project-id]');
+    projectCards.forEach(card => {
+        const overlay = card.querySelector('.project-overlay');
+        const githubLink = overlay.querySelector('a');
+        
+        // Prevent the overlay from triggering card click
+        overlay.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Handle card click (excluding overlay)
+        card.addEventListener('click', (e) => {
+            if (!e.target.closest('.project-overlay')) {
+                const projectId = card.getAttribute('data-project-id');
+                showProjectDetails(projectId);
+            }
+        });
+    });
+
+    // Close modal when clicking outside or on close button
+    const modal = document.getElementById('project-modal');
+    const closeBtn = document.querySelector('.modal-close');
+    
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+});
