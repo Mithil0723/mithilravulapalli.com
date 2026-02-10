@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/modal.css">
 </head>
+
 <body>
     <!-- Project Details Modal -->
     <div id="project-modal" class="modal">
@@ -43,32 +45,28 @@
                 <source src="project images/Background_video.mp4" type="video/mp4">
                 Your browser does not support video backgrounds.
             </video>
-            
+
             <div class="hero-overlay"></div>
-            
+
             <div class="hero-content">
                 <h1 class="hero-title">Mithil Ravulapalli</h1>
                 <p class="hero-subtitle">
-                    <span class="typing-text" data-texts='["Data Science Student", "AI Enthusiast", ""]'></span>
+                    <span class="typing-text"
+                        data-texts='["Architecting Agentic AI Systems", "AI Workflow Engineer", "Building Intelligent Pipelines"]'></span>
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Build Something</a>
                 </div>
                 <div class="scroll-indicator">
                     <span>Scroll</span>
                     <span class="scroll-arrow">↓</span>
                 </div>
             </div>
-            
+
             <button class="video-control" aria-label="Pause background video">⏸</button>
         </section>
-    </main>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/projectDetails.js"></script>
-</body>
-</html>
         <section id="about" class="about-section">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
@@ -77,26 +75,39 @@
                         <div class="about-image-wrapper">
                             <img src="project images/avatar.png" alt="Mithil Ravulapalli" class="about-image">
                         </div>
-                        <a href="assets/documents/resume.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
+                        <a href="assets/documents/resume.pdf" class="btn btn-primary" target="_blank">Download
+                            Resume</a>
                     </div>
                     <div class="about-text-content">
                         <h3>Hi, I'm Mithil Ravulapalli!</h3>
                         <p>
-                            A final year Data Science undergraduate at the University of Illinois at Chicago (UIC), driven by a passion for transforming complex datasets into meaningful insights and building intelligent systems. My experiences living across diverse regions of India have instilled in me a remarkable adaptability and a global mindset.
+                            I'm a Data Science student at the University of Illinois at Chicago focused on building
+                            intelligent, agent-driven systems that move beyond static models toward dynamic
+                            decision-making architectures. My work centers on integrating machine learning,
+                            Retrieval-Augmented Generation (RAG), and Agentic AI into structured workflow pipelines that
+                            combine reasoning, tool orchestration, and state-aware execution.
                         </p>
                         <p>
-                            My expertise spans traditional data science and cutting-edge AI technologies including Generative AI, Retrieval-Augmented Generation (RAG), and Large Language Models (LLMs). I am passionate about uncovering hidden patterns in complex datasets, combining statistical rigor with creative problem-solving to translate data into business value.
+                            Rather than viewing LLMs as standalone text generators, I approach them as components within
+                            broader AI systems — systems that require routing logic, memory management, structured tool
+                            invocation, and feedback-driven iteration. I design multi-step reasoning workflows where
+                            LLMs interact with external data sources, retrieval layers, and decision modules to produce
+                            reliable, context-aware outputs.
                         </p>
                         <p>
-                            Proficient in Python, SQL, and TensorFlow, I've successfully delivered impactful projects and am always exploring new applications of deep learning. I am currently seeking opportunities to apply my machine learning skills in production environments to solve real-world challenges.
+                            Growing up across diverse regions of India as the child of an army officer cultivated
+                            resilience, adaptability, and structured discipline — traits that strongly influence how I
+                            design systems. I am driven by a vision of AI not as isolated models, but as orchestrated
+                            ecosystems where RAG pipelines, agentic reasoning loops, and tool integration frameworks
+                            operate cohesively.
                         </p>
                         <div class="skills-list">
-                            <span class="skill-badge">Data Science</span>
+                            <span class="skill-badge">Agentic AI</span>
+                            <span class="skill-badge">RAG Pipelines</span>
+                            <span class="skill-badge">LLM Orchestration</span>
                             <span class="skill-badge">Machine Learning</span>
-                            <span class="skill-badge">Generative AI</span>
-                            <span class="skill-badge">LLMs & RAG</span>
-                            <span class="skill-badge">AI Agents</span>
-                            <span class="skill-badge">Business Analytics</span>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">Data Engineering</span>
                         </div>
                     </div>
                 </div>
@@ -118,12 +129,16 @@
                         <div class="project-image">
                             <img src="project images/tata.jpg" alt="Tata Data Visualization" class="project-thumbnail">
                             <div class="project-overlay">
-                                <a href="https://lookerstudio.google.com/reporting/f6717d30-9776-40eb-8e11-dbb543bf7399" class="btn btn-small" target="_blank">View Project</a>
+                                <span class="project-impact">Executive Insights</span>
+                                <a href="https://lookerstudio.google.com/reporting/f6717d30-9776-40eb-8e11-dbb543bf7399"
+                                    class="btn btn-small" target="_blank">View Project</a>
                             </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Tata Data Visualization</h3>
-                            <p class="project-description">Developed strategic analytical skills by creating impactful data visualizations that transformed complex datasets into clear, actionable insights for senior executives.</p>
+                            <p class="project-description">Created impactful data visualizations for Tata Consultancy
+                                Services, transforming complex datasets into clear, actionable insights that empowered
+                                senior executives to make data-driven strategic decisions.</p>
                             <div class="project-tags">
                                 <span class="tag">Tableau</span>
                                 <span class="tag">Data Analysis</span>
@@ -134,14 +149,19 @@
                     <!-- Project 2: Recommendation System -->
                     <div class="project-card" data-category="machine-learning" data-project-id="recommendation-system">
                         <div class="project-image">
-                            <img src="project images/Recommendation.png" alt="Recommendation System" class="project-thumbnail">
+                            <img src="project images/Recommendation.png" alt="Recommendation System"
+                                class="project-thumbnail">
                             <div class="project-overlay">
-                                <a href="https://github.com/Mithil0723/Recommendation-System" class="btn btn-small" target="_blank">View on GitHub</a>
+                                <span class="project-impact">SVD + Collaborative Filtering</span>
+                                <a href="https://github.com/Mithil0723/Recommendation-System" class="btn btn-small"
+                                    target="_blank">View on GitHub</a>
                             </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Amazon Product Recommendation System</h3>
-                            <p class="project-description">Built a recommendation system to suggest the best Amazon products to users based on past rating data, using various filtering techniques.</p>
+                            <p class="project-description">Built a suite of recommendation models using collaborative
+                                filtering and matrix factorization (SVD), optimized through hyperparameter tuning for
+                                improved predictive accuracy.</p>
                             <div class="project-tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">Collaborative Filtering</span>
@@ -152,14 +172,19 @@
                     <!-- Project 3: Predictive Analysis -->
                     <div class="project-card" data-category="machine-learning" data-project-id="predictive-analysis">
                         <div class="project-image">
-                            <img src="project images/Predictive analysis.png" alt="Predictive Analysis" class="project-thumbnail">
+                            <img src="project images/Predictive analysis.png" alt="Predictive Analysis"
+                                class="project-thumbnail">
                             <div class="project-overlay">
-                                <a href="https://github.com/Mithil0723/Predicting-Potential-Customers" class="btn btn-small" target="_blank">View on GitHub</a>
+                                <span class="project-impact">84% Accuracy</span>
+                                <a href="https://github.com/Mithil0723/Predicting-Potential-Customers"
+                                    class="btn btn-small" target="_blank">View on GitHub</a>
                             </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Predicting Potential Customers</h3>
-                            <p class="project-description">Identified which leads are more likely to convert to paid customers using decision trees, random forests, and hyperparameter tuning.</p>
+                            <p class="project-description">Built a lead scoring model for EdTech startup ExtraaLearn,
+                                achieving 84% accuracy using Decision Trees and Random Forests with hyperparameter
+                                tuning to optimize resource allocation.</p>
                             <div class="project-tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">Random Forest</span>
@@ -172,12 +197,16 @@
                         <div class="project-image">
                             <img src="project images/FoodHub.png" alt="FoodHub Analysis" class="project-thumbnail">
                             <div class="project-overlay">
-                                <a href="https://github.com/Mithil0723/Food-Hub-Order-Analysis" class="btn btn-small" target="_blank">View on GitHub</a>
+                                <span class="project-impact">1,898 Orders Analyzed</span>
+                                <a href="https://github.com/Mithil0723/Food-Hub-Order-Analysis" class="btn btn-small"
+                                    target="_blank">View on GitHub</a>
                             </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">FoodHub Order Analysis</h3>
-                            <p class="project-description">Analyzed order data to understand demand dynamics, helping to enhance business operations and improve customer experiences.</p>
+                            <p class="project-description">Conducted in-depth exploratory data analysis on 1,898
+                                customer orders, generating actionable insights and strategic recommendations for
+                                business optimization.</p>
                             <div class="project-tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">Pandas</span>
@@ -190,12 +219,16 @@
                         <div class="project-image">
                             <img src="project images/DSA.png" alt="DSA" class="project-thumbnail">
                             <div class="project-overlay">
-                                <a href="https://github.com/Mithil0723/DSA" class="btn btn-small" target="_blank">View on GitHub</a>
+                                <span class="project-impact">O(log n) Optimized</span>
+                                <a href="https://github.com/Mithil0723/DSA" class="btn btn-small" target="_blank">View
+                                    on GitHub</a>
                             </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Data Structures & Algorithms</h3>
-                            <p class="project-description">Designed optimized systems using Binary Search Trees, graph algorithms, and encryption techniques, balancing efficiency with intuitive user interfaces.</p>
+                            <p class="project-description">Designed optimized systems using Binary Search Trees,
+                                graph-based pathfinding with OpenStreetMap data, and Caesar/Vigenère cipher encryption —
+                                focusing on algorithmic efficiency and modular design.</p>
                             <div class="project-tags">
                                 <span class="tag">C++</span>
                                 <span class="tag">Algorithms</span>
@@ -209,62 +242,95 @@
         <section id="skills" class="skills-section">
             <div class="container">
                 <h2 class="section-title">Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">[DS]</div>
-                        <h3 class="skill-name">Data Science</h3>
-                        <p class="skill-level">Expert</p>
+                <div class="skill-groups-container">
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">AI & Agents</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">🤖</div>
+                                <h3 class="skill-name">Agentic AI</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">🔗</div>
+                                <h3 class="skill-name">RAG Pipelines</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">🧠</div>
+                                <h3 class="skill-name">LLM Orchestration</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">✨</div>
+                                <h3 class="skill-name">Generative AI</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">[ML]</div>
-                        <h3 class="skill-name">Machine Learning</h3>
-                        <p class="skill-level">Expert</p>
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Core ML & Data</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">🐍</div>
+                                <h3 class="skill-name">Python</h3>
+                                <p class="skill-level">Expert</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">📊</div>
+                                <h3 class="skill-name">Machine Learning</h3>
+                                <p class="skill-level">Expert</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">🗄️</div>
+                                <h3 class="skill-name">SQL</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">🐼</div>
+                                <h3 class="skill-name">Pandas</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">[AI]</div>
-                        <h3 class="skill-name">Generative AI</h3>
-                        <p class="skill-level">Advanced</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">[Py]</div>
-                        <h3 class="skill-name">Python</h3>
-                        <p class="skill-level">Expert</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">[SQL]</div>
-                        <h3 class="skill-name">SQL</h3>
-                        <p class="skill-level">Advanced</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">[Tab]</div>
-                        <h3 class="skill-name">Tableau</h3>
-                        <p class="skill-level">Advanced</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">[C++]</div>
-                        <h3 class="skill-name">C++</h3>
-                        <p class="skill-level">Intermediate</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">[Pandas]</div>
-                        <h3 class="skill-name">Pandas</h3>
-                        <p class="skill-level">Advanced</p>
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Visualization & Tools</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">📈</div>
+                                <h3 class="skill-name">Tableau</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">⚙️</div>
+                                <h3 class="skill-name">C++</h3>
+                                <p class="skill-level">Intermediate</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">🔀</div>
+                                <h3 class="skill-name">Git</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
         <section id="contact" class="contact-section">
             <div class="container">
                 <h2 class="section-title">Get In Touch</h2>
                 <div class="contact-grid">
                     <div class="contact-info">
-                        <h3>Let's Connect</h3>
+                        <h3>Let's Build Something</h3>
                         <p>
-                            I'm currently open to new opportunities and collaborations. 
-                            Feel free to reach out if you have a project in mind, want to discuss 
-                            the latest in AI, or just want to say hi!
+                            I'm open to collaborations on Agentic AI systems, RAG pipelines,
+                            and intelligent workflow architectures. If you have a challenging
+                            AI problem or want to explore what's possible — let's talk.
                         </p>
                         <div class="social-links">
                             <a href="mailto:mithil.ravulapalli@example.com" class="social-link">📧 Email</a>
-                            <a href="https://www.linkedin.com/in/mithil-ravulapalli/" class="social-link" target="_blank">💼 LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/mithil-ravulapalli/" class="social-link"
+                                target="_blank">💼 LinkedIn</a>
                             <a href="https://github.com/Mithil0723" class="social-link" target="_blank">🐙 GitHub</a>
                         </div>
                     </div>
@@ -284,11 +350,12 @@
                     </div>
                 </div>
             </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Mithil Ravulapalli. All rights reserved.</p>
+            <p>&copy; 2026 Mithil Ravulapalli. All rights reserved.</p>
             <div class="footer-socials">
                 <a href="mailto:mithil.ravulapalli@example.com" class="social-link">📧</a>
                 <a href="https://www.linkedin.com/in/mithil-ravulapalli/" class="social-link" target="_blank">💼</a>
@@ -297,6 +364,8 @@
         </div>
     </footer>
 
-        </section>
-            </div>
-        </section>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/projectDetails.js"></script>
+</body>
+
+</html>

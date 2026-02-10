@@ -1,20 +1,16 @@
-# **About me:**
-I'm Mithil Ravulapalli
-Born on 23rd July 2001, I am currently in my final year of undergraduate majoring in Data Science at the University of Illinois at Chicago (UIC). My academic journey has been driven by an unwavering passion for transforming complex datasets into meaningful insights and building intelligent systems.
+## About Me
 
-I have experienced India's vast cultural tapestry, living across diverse regions from Hyderabad and Bangalore to Himachal Pradesh and the Northeast. These experiences have instilled remarkable adaptability and a global mindset essential in today's interconnected professional landscape.
+I am a Data Science student at the University of Illinois at Chicago focused on building intelligent, agent-driven systems that move beyond static models toward dynamic decision-making architectures. My work centers on integrating machine learning, Retrieval-Augmented Generation (RAG), and Agentic AI into structured AI workflow integration pipelines that combine reasoning, tool orchestration, and state-aware execution.
 
-My expertise spans traditional data science and cutting-edge AI technologies including Generative AI, Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), and AI agents. I've also explored Synthetic Intelligence and its applications in enhancing business operations, but I never got to apply sythetic intelligence applications.
+Rather than viewing Large Language Models (LLMs) as standalone text generators, I approach them as components within broader AI systems — systems that require routing logic, memory management, structured tool invocation, and feedback-driven iteration. I am particularly interested in designing multi-step reasoning workflows where LLMs interact with external data sources, retrieval layers, and decision modules to produce reliable, context-aware outputs.
 
-**Core Competencies:**
-    Data Science
-    Machine Learning
-    Generative AI
-    LLMs & RAG
-    AI Agents
-    Synthetic Intelligence
-    Business Analytics
-    Digital Transformation
+My technical foundation includes building recommendation systems using matrix factorization and collaborative filtering, developing predictive classification models, and constructing data-driven dashboards for strategic decision-making. However, my focus is increasingly on AI workflow integration — designing architectures that connect structured data pipelines with RAG systems, agent coordination frameworks, and modular tool-augmented reasoning environments.
+
+I am especially drawn to Agentic AI — systems capable of planning, delegating, invoking tools, and adapting through memory-aware execution loops. I explore how retrieval systems, vector databases, and contextual memory layers can be integrated into scalable pipelines that support reliable knowledge grounding and controlled reasoning. My goal is to design AI systems that are not only intelligent, but architecturally coherent, debuggable, and production-aware.
+
+Growing up across diverse regions of India as the child of an army officer cultivated resilience, adaptability, and structured discipline — traits that strongly influence how I design systems. As an NCC cadet, I led coordinated initiatives that required planning, delegation, and execution under constraints. These experiences mirror how I approach agent design: clear role definition, coordinated execution, and accountability within complex systems.
+
+I am driven by a vision of AI not as isolated models, but as orchestrated ecosystems — systems where RAG pipelines, agentic reasoning loops, memory modules, and tool integration frameworks operate cohesively to solve real-world problems. I aim to contribute to the development of scalable, modular AI architectures that integrate data, reasoning, and action into unified intelligent workflows.
 
 ## 2\. **My Projects:**
 
