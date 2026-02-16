@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     // Typing animation
     const typingText = document.querySelector('.typing-text');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoControl = document.querySelector('.video-control');
     if (video && videoControl) {
         let isPlaying = true;
-        videoControl.addEventListener('click', function() {
+        videoControl.addEventListener('click', function () {
             if (isPlaying) {
                 video.pause();
                 videoControl.textContent = '▶';
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sticky header
     const header = document.querySelector('.header');
     if (header) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
@@ -114,6 +114,110 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             });
+        });
+    }
+
+    /*-----------------------------------*\
+     * #CHATBOT
+    \*-----------------------------------*/
+
+    // Backend URL — change this to your deployed URL for production
+    const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === ''
+        ? 'http://localhost:8000'
+        : 'https://your-backend.onrender.com'; // TODO: replace with your production URL
+
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const closeChatBtn = document.getElementById('close-chat-btn');
+    const chatInput = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('send-btn');
+    const chatMessages = document.getElementById('chat-messages');
+
+    if (chatbotToggle && chatbotContainer && closeChatBtn && chatInput && sendBtn && chatMessages) {
+        function toggleChat() {
+            chatbotContainer.classList.toggle('active');
+            const isActive = chatbotContainer.classList.contains('active');
+
+            // Toggle icon
+            const icon = chatbotToggle.querySelector('.toggle-icon');
+            const closeIcon = chatbotToggle.querySelector('.toggle-icon-close');
+
+            if (isActive) {
+                icon.style.display = 'none';
+                closeIcon.style.display = 'block';
+                setTimeout(() => chatInput.focus(), 300);
+            } else {
+                icon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        }
+
+        chatbotToggle.addEventListener('click', toggleChat);
+        closeChatBtn.addEventListener('click', toggleChat);
+
+        function addMessage(text, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
+
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('message-content');
+            contentDiv.textContent = text;
+
+            messageDiv.appendChild(contentDiv);
+            chatMessages.appendChild(messageDiv);
+
+            // Auto scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            return messageDiv;
+        }
+
+        async function handleUserMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            addMessage(text, true);
+            chatInput.value = '';
+
+            // Disable input while waiting
+            chatInput.disabled = true;
+            sendBtn.disabled = true;
+
+            // Show loading message
+            const loadingMsg = addMessage('Thinking...', false);
+
+            try {
+                const response = await fetch(`${API_URL}/chat`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                // Replace loading message with actual reply
+                loadingMsg.querySelector('.message-content').textContent = data.reply;
+
+            } catch (error) {
+                console.error('Chat error:', error);
+                loadingMsg.querySelector('.message-content').textContent =
+                    'Sorry, I couldn\'t connect to the server. Please try again later.';
+            } finally {
+                // Re-enable input
+                chatInput.disabled = false;
+                sendBtn.disabled = false;
+                chatInput.focus();
+            }
+        }
+
+        sendBtn.addEventListener('click', handleUserMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleUserMessage();
+            }
         });
     }
 });

@@ -118,12 +118,34 @@
                 <h2 class="section-title">My Projects</h2>
                 <div class="project-filters">
                     <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI</button>
                     <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
                     <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
                     <button class="filter-btn" data-filter="data-visualization">Data Visualization</button>
                     <button class="filter-btn" data-filter="dsa">DSA</button>
                 </div>
                 <div class="projects-grid">
+                    <!-- Project: RAG AI Chatbot -->
+                    <div class="project-card" data-category="ai" data-project-id="rag-chatbot">
+                        <div class="project-image">
+                            <img src="project images/RAG.png" alt="RAG AI Chatbot" class="project-thumbnail">
+                            <div class="project-overlay">
+                                <span class="project-impact">RAG + Groq LPU</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Chatbot</h3>
+                            <p class="project-description">Built a hyper-fast RAG chatbot using Groq's LPU Inference
+                                Engine (GPT-OSS 120B) and Supabase pgvector that answers visitor questions with
+                                real-time sub-second latency.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Groq API</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Project 1: Tata Data Visualization -->
                     <div class="project-card" data-category="data-visualization">
                         <div class="project-image">
@@ -302,6 +324,11 @@
                                 <p class="skill-level">Advanced</p>
                             </div>
                             <div class="skill-card">
+                                <div class="skill-icon">📉</div>
+                                <h3 class="skill-name">Matplotlib</h3>
+                                <p class="skill-level">Advanced</p>
+                            </div>
+                            <div class="skill-card">
                                 <div class="skill-icon">⚙️</div>
                                 <h3 class="skill-name">C++</h3>
                                 <p class="skill-level">Intermediate</p>
@@ -363,6 +390,33 @@
             </div>
         </div>
     </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <span class="chat-avatar">🤖</span>
+                <h3>AI Assistant</h3>
+            </div>
+            <button id="close-chat-btn" class="close-chat-btn">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    Hi! I'm Mithil's AI Assistant. Ask me about his projects, skills, or Agentic AI!
+                </div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type a message..." aria-label="Type a message">
+            <button id="send-btn" class="send-btn">➤</button>
+        </div>
+    </div>
+
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open Chat">
+        <span class="toggle-icon">💬</span>
+        <span class="toggle-icon-close" style="display: none;">×</span>
+    </button>
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/projectDetails.js"></script>
